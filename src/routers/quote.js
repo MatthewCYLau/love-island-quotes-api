@@ -9,7 +9,7 @@ router.get('/quotes', async (req, res) => {
         var random = Math.floor(Math.random() * count);
 
         Quote.findOne().skip(random).exec(
-            function (err, result) {
+            (err, result) => {
                 if (!err) {
                     res.send(result);
                 }
@@ -23,7 +23,7 @@ router.post('/quotes', async (req, res) => {
         quote: req.body.quote
     });
 
-    quote.save(function (err) {
+    await quote.save((err) => {
 
         if (!err) {
             res.status(201).send('Added quote to database');
