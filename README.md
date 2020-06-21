@@ -12,12 +12,26 @@ Use the npm package manager to install node modules
 npm install # installs node modules
 ```
 
+## Add configurations
+
+In `/config/dev.env` add your own `MONGODB_URL` MongoDB database connection string
+
 ## Run Locally
 
 In the project root directory, run this command:
 
 ```bash
 npm run dev
+```
+
+## Usage
+
+To add a new quote, make a POST request to API with the following request body:
+
+```bash
+{
+    "quote": # Wrap quote in double-quotes i.e. "Hello World"
+}
 ```
 
 ## Contributing
