@@ -14,7 +14,7 @@ npm install # installs node modules
 
 ## Add configurations
 
-In `/config/dev.env` add your own `MONGODB_URL` MongoDB database connection string
+Create a `.env` file and add your own `MONGODB_URL` MongoDB database connection string
 
 ## Run Locally
 
