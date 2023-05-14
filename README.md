@@ -2,7 +2,7 @@
 
 A NodeJS app which returns a randomlly chosen Love Island quote stored in a MongoDB Atlas database
 
-Make GET requests to https://love-island-quotes-api.herokuapp.com/quotes to get random Love Island quote
+API URL here: [`https://love-island-quotes-api-service-3i2mtbjusq-nw.a.run.app/quotes`](https://love-island-quotes-api-service-3i2mtbjusq-nw.a.run.app/quotes)
 
 ## Installation
 
@@ -26,12 +26,21 @@ npm run dev
 
 ## Usage
 
-To add a new quote, make a POST request to API with the following request body:
+To add a new quote, make a POST request to `/quotes` with the following request body:
 
 ```bash
 {
     "quote": # Wrap quote in double-quotes i.e. "Hello World"
 }
+```
+
+## Deploy to GCP Cloud Run
+
+```bash
+docker build -t matlau/love-island-quotes-api:v1 . --platform linux/amd64
+docker push matlau/love-island-quotes-api:v1    
+gcloud run deploy love-island-quotes-api-service --image matlau/love-island-quotes-api:v1 --region europe-west2 \
+--update-secrets=MONGODB_URL=<secret-name>:latest
 ```
 
 ## Contributing
