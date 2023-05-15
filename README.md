@@ -1,6 +1,6 @@
 # Love Island Quotes API
 
-A NodeJS app which returns a randomlly chosen Love Island quote stored in a MongoDB Atlas database
+An Express app which returns a randomlly chosen Love Island quote stored in a MongoDB Atlas database
 
 API URL here: [`https://love-island-quotes-api-service-3i2mtbjusq-nw.a.run.app/quotes`](https://love-island-quotes-api-service-3i2mtbjusq-nw.a.run.app/quotes)
 
@@ -12,11 +12,11 @@ Use the npm package manager to install node modules
 npm install # installs node modules
 ```
 
-## Add configurations
+## Add configuration
 
 Create a `.env` file and add your own `MONGODB_URL` MongoDB database connection string
 
-## Run Locally
+## Run locally
 
 In the project root directory, run this command:
 
@@ -30,7 +30,7 @@ To add a new quote, make a POST request to `/quotes` with the following request 
 
 ```bash
 {
-    "quote": # Wrap quote in double-quotes i.e. "Hello World"
+    "quote": "Hi there!"
 }
 ```
 
