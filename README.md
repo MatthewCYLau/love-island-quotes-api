@@ -6,15 +6,20 @@ API URL here: [`https://love-island-quotes-api-service-3i2mtbjusq-nw.a.run.app/q
 
 ## Installation
 
-Use the npm package manager to install node modules
+Use the npm package manager to install node modules:
 
 ```bash
-npm install # installs node modules
+npm install
 ```
 
 ## Add configuration
 
-Create a `.env` file and add your own `MONGODB_URL` MongoDB database connection string
+Create a `.env` file and add your own `MONGODB_URL` MongoDB database connection string:
+
+```
+PORT=8080
+MONGODB_URL=<MONGODB-CONNECTION-STRING>
+```
 
 ## Run locally
 
